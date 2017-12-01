@@ -6,9 +6,9 @@ var fs = require('fs');
 // Configuring server to respond to all the request
 var server = http.createServer(function(request, response) {
 
-    response.writeHead('200', {'Content-Type': 'text/json'});
+    response.writeHead('200', {'Content-Type': 'text/plain'});
     // reading student.json file first time
-    
+
     fs.readFile('student.json', 'utf-8', function(error, data){
         // parsing data to object
         obj = JSON.parse(data);
